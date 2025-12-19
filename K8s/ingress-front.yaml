@@ -1,17 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend-ingress
+  name: ingress-front
   annotations:
-    kubernetes.io/ingress.class: nginx
-    # Conecta con el archivo del paso 1
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    # AQUÍ NO PONEMOS REWRITE-TARGET
 spec:
+  ingressClassName: nginx
   tls:
     - hosts:
         - unlucoin.info
-        # - www.unlucoin.info  <-- Descomenta si también configuras www en DNS
-      secretName: frontend-tls # Aquí se guardará el certificado
+      secretName: frontend-tls
   rules:
     - host: unlucoin.info
       http:

@@ -22,7 +22,8 @@ spec:
 
       containers:
         - name: frontend-vite
-          image: josuegaticaodato/frontend-vite
+          image: josuegaticaodato/frontend-vite:v2
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
           env:
@@ -34,8 +35,8 @@ spec:
               value: "https://unlucoin.info/perfil"
             - name: VITE_APP_AUTH0_AUDIENCE
               value: "http://backend-services:8000"
-            - name: VITE_APP_API_SERVER_URL
-              value: "http://backend-services:8000"
+            - name: VITE_APP_DJANGO_BACKEND
+              value: "https://unlucoin.info/api"
             - name: VITE_APP_TEST_MERCADOPAGO
               value: "TEST-ad9af574-3705-4b15-b991-f28af2497f9f"
 

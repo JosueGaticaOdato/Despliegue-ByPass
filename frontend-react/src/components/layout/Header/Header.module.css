@@ -1,0 +1,130 @@
+.header {
+  /*background-color: var(--color-oscuro);*/
+  background: linear-gradient(
+      77deg,
+      var(--color-header1) 0%,
+      var(--color-header2) 100%
+    ),
+    url("../../../assets/images/header-bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--fuente-primaria);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.headerNavbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.headerTitle {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.headerTitle h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--color-letras-secundario);
+  font-family: var(--fuente-secundaria);
+  font-weight: bold;
+}
+
+.logoHeader {
+  margin: 0.7rem;
+}
+
+.logoImgHeader {
+  width: 5rem;
+  padding: 0.5rem 0;
+}
+
+.navHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+/**
+.navHeader li:not(:last-child) {
+  list-style: none;
+  padding: 0rem 1.2rem;
+}**/
+.navHeader li {
+  list-style: none;
+}
+
+.navHeader li:not(:last-child) {
+  padding: 0rem 1.2rem;
+}
+
+.navHeader li a {
+  text-decoration: none;
+  color: var(--color-letras-secundario);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.navHeaderLogin {
+  list-style: none;
+  border-radius: 2rem;
+  padding: 0.7rem 1.7rem;
+  margin: 0rem 1.2rem;
+  border: 0.1rem solid var(--color-claro);
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+
+.navHeaderLogin {
+  color: var(--color-claro);
+}
+
+.navHeaderLogin span {
+  color: var(--color-claro);
+}
+
+.loginAuth0{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.imgLoginAuth0{
+  cursor: pointer;
+  border-radius: 50%;
+  width: 60%;
+}
+
+.activeLink {
+  color: var(--color-letras-secundario);
+  font-weight: bolder;
+  border-bottom: 5px solid var(--color-letras-secundario);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .navHeader li:not(:last-child) a:hover  {
+    color: var(--color-letras-secundario);
+    font-weight: bolder;
+    border-bottom: 5px solid var(--color-letras-secundario);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navHeaderLogin:hover {
+    background-color: var(--color-claro);
+    color: var(--color-letras-primario);
+  }
+}

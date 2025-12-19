@@ -1,0 +1,42 @@
+.viviLaExperiencia{
+    background-image: url("../../../images/ViviLaExperiencia.jpg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 30%;
+}
+
+.viviLaExperiencia .titulo{
+    padding: 1rem 0rem 0rem 0rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--color-letras-secundario);
+    text-shadow: 2px 2px 4px var(--color-letras-primario);
+}
+
+.experiencias{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.experiencias figure {
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(11, 39, 57, 0.64);
+    display: flex;
+    flex-direction: column; /* Alinear elementos uno debajo del otro */
+    align-items: center; /* Alinear elementos horizontalmente al centro */
+    text-align: center; /* Alinear contenido de figcaption al centro */
+}
+
+.experiencias figure img{
+    width: 20%;
+    padding: 0.5rem;
+}
+
+.experiencias figure figcaption{
+    text-transform: uppercase;
+    color: var(--color-letras-secundario);
+    font-weight: bold;
+}

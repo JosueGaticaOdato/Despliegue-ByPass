@@ -1,0 +1,272 @@
+.eventDetail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.headerEventDetail{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenEventDetail{
+  width: 90%;
+  height: 100%;
+  object-fit: fill; /* Cover */
+  padding: 2rem 0;
+  border-radius: 5vh;
+}
+
+.infEventDetail{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: left;
+}
+
+.titleEventDetail{
+  font-size: 7vh;
+  font-weight: bold;
+  font-family: var(--fuente-primaria);
+}
+
+.fechaTicketsEventDetail{
+  display: flex;
+  justify-content: space-between;
+  align-items: safe;
+  padding: 2rem 0;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  align-items: flex-start;
+}
+
+.titleFecha{
+  font-size: 3.5vh;
+  font-family: var(--fuente-secundaria);
+  font-weight: 600;
+}
+
+.fechaHora, .listaTicket{
+  font-size: 2.5vh;
+  font-weight: 400;
+  font-family: var(--fuente-primaria);
+  padding: 1vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fechaHora li, .listaTicket li{
+  padding: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fechaHora svg, .fechaHora svg {
+  padding-right: 1vh;
+}
+
+.ticketEventDetail{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.informationTicket{
+  font-size: 3vh;
+  font-family: var(--fuente-secundaria);
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+
+/* Compra de ticket */
+
+.comprarEntrada{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.titleComprarEntrada{
+  font-size: 3vh;
+  font-family: var(--fuente-secundaria);
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+
+.formComprarEntrada {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.formComprarEntrada label {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.2vh;
+  font-family: var(--fuente-primaria);
+  font-weight: 500;
+  color: var(--color-letras-primario);
+  gap: 0.4rem;
+}
+
+.formComprarEntrada input,
+.formComprarEntrada select {
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  font-size: 2.2vh;
+  font-family: var(--fuente-primaria);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.precioTotal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.precioEntrada {
+  font-size: 2vh;
+  font-weight: 600;
+  font-family: var(--fuente-secundaria);
+  color: #16a34a;
+}
+
+.totalEntrada {
+  font-size: 2.8vh;
+  font-weight: bolder;
+  font-family: var(--fuente-secundaria);
+  color: #16a34a;
+}
+
+.comprarTicketsButton {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comprarTicketsButton button {
+  padding: 0.9rem 2rem;
+  border-radius: 0.8rem;
+  background-color: var(--color-botones);
+  color: #ffffff;
+  font-size: 2.4vh;
+  font-family: var(--fuente-secundaria);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.comprarTicketsButton button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+}
+
+.loading {
+  font-size: 2.2vh;
+  font-family: var(--fuente-primaria);
+  color: #6b7280;
+}
+
+.errorWallet {
+  font-size: 2.2vh;
+  font-family: var(--fuente-primaria);
+  color: #dc2626;
+  font-weight: 500;
+}
+
+/* Descripcion */
+
+.descriptionEventDetail{
+}
+
+.titleDescription{
+  font-size: 3.5vh;
+  font-family: var(--fuente-secundaria);
+  font-weight: 600;
+}
+
+.descriptionEventDetail .description{
+  font-size: 2.5vh;
+  font-family: var(--fuente-secundaria);
+  padding: 2rem 0;
+}
+
+/* Responsive */
+
+/* --------- TABLET Y MÓVIL (menor a 1024px) --------- */
+@media (max-width: 1024px) {
+
+  /* Banner */
+  .headerEventDetail {
+    height: 30vh;
+    padding: 1.5rem 0;
+  }
+
+  .imagenEventDetail {
+    width: 95%;
+    height: 100%;
+    border-radius: 3vh;
+  }
+
+  /* Info general */
+  .infEventDetail {
+    width: 95%;
+  }
+
+  .titleEventDetail {
+    font-size: 5vh;
+  }
+
+  /* FECHA - TICKETS → de fila a columna */
+  .fechaTicketsEventDetail {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    align-items: flex-start;
+  }
+
+  .titleFecha,
+  .informationTicket {
+    font-size: 3vh;
+  }
+
+  .fechaHora,
+  .listaTicket {
+    font-size: 2.2vh;
+  }
+
+  .ticketEventDetail {
+    padding: 0;
+    width: 100%;
+  }
+
+  .ticketEventDetail button {
+    width: fit-content;
+    font-size: 2.3vh;
+    padding: 0.8rem 2rem;
+  }
+
+  /* Descripción */
+  .titleDescription {
+    font-size: 3vh;
+  }
+
+  .descriptionEventDetail .description {
+    font-size: 2.2vh;
+  }
+}

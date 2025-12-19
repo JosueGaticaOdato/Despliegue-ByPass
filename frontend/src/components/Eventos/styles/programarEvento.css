@@ -1,0 +1,50 @@
+.formularioEvento{
+    display: grid;
+    grid-template-areas:  "evento entradas"
+                            "evento enviar";
+    justify-items: center;
+    height: 50vh;
+}
+
+/*GRID*/
+.datosEntradas{
+    grid-area: entradas;
+}
+
+.datosEvento{
+    width: 100%;
+    height: auto;
+    grid-area: evento;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*--*/
+label {
+    color: var(--color-letras-secundario);
+    width: 80%;
+    padding: 0.5rem 0;
+}
+
+/*Datos del evento*/
+
+.datosEvento label > input, .datosEvento label > select {
+    display: block; /*Label arriba del input*/
+    width: 100%;
+}
+
+/*Tipos de entrada*/
+
+.tipoEntrada {
+    display: flex;
+    padding: 1rem;
+}
+
+.tipoEntrada label>input{
+    display: block;
+}
+
+/*Boton*/
